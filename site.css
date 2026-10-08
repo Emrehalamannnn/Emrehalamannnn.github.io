@@ -1,0 +1,97 @@
+/* Wordlands website: the home, privacy and support pages. The colours are the app's (as in link.css). */
+:root {
+  --paper: #f6f1e7;
+  --card: #ffffff;
+  --ink: #1e2a3a;
+  --muted: #5b6573;
+  --line: #e4dccc;
+  --accent: #3451c6;
+  --on-accent: #ffffff;
+  --right: #1c7c7d;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #16191f;
+    --card: #22262e;
+    --ink: #ece7dd;
+    --muted: #a9a59c;
+    --line: #353a44;
+    --accent: #7d93f0;
+    --on-accent: #16191f;
+    --right: #2fa3a3;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.55 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 0 16px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+header.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding: 22px 0 14px;
+}
+.brand { font-weight: 800; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-weight: 600; }
+nav a:first-child { margin-left: 0; }
+nav a[aria-current="page"] { color: var(--accent); }
+main {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 28px 22px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow-wrap: anywhere;
+}
+@media (min-width: 600px) { main { padding: 36px 40px; } }
+h1 { margin: 0 0 12px; font-size: 1.7rem; line-height: 1.2; overflow-wrap: normal; }
+h2 { margin: 30px 0 10px; font-size: 1.2rem; line-height: 1.3; }
+h3 { margin: 22px 0 6px; font-size: 1.02rem; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+code {
+  font: 0.88em ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--paper);
+  border-radius: 5px;
+  padding: 1px 5px;
+  overflow-wrap: anywhere;
+}
+.eyebrow { margin: 0 0 6px; font-weight: 800; color: var(--right); letter-spacing: 0.02em; }
+.lead { font-size: 1.12rem; }
+.muted { color: var(--muted); }
+.table { overflow-x: auto; margin: 0 0 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.94rem; }
+th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; }
+td:first-child { font-weight: 600; min-width: 8em; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 6px; }
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 13px 18px;
+  border-radius: 12px;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+.button.primary { background: var(--accent); color: var(--on-accent); }
+.three { list-style: none; padding: 0; margin: 18px 0; }
+.three li { padding: 12px 0; border-top: 1px solid var(--line); margin: 0; }
+.three li:last-child { border-bottom: 1px solid var(--line); }
+details { border-top: 1px solid var(--line); padding: 12px 0; }
+details:last-of-type { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 700; }
+details > p, details > ul { margin-top: 10px; }
+footer { color: var(--muted); font-size: 0.85rem; padding: 18px 0 32px; }
+footer a { color: var(--muted); }

@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["K2RM3C7JU4.app.wordlands.Wordlands"],
+        "components": [
+          { "/": "/r" }, { "/": "/r/*" },
+          { "/": "/j" }, { "/": "/j/*" }
+        ]
+      }
+    ]
+  }
+}
